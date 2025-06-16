@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+body {
+  background-color: #111827;
+  color: #e5e7eb;
+  font-family: "Inter", sans-serif;
+}
+.nav-link {
+  @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white;
+}
+.btn-primary {
+  @apply px-6 py-3 rounded-lg text-white font-semibold transition-all duration-300;
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+.btn-primary:hover {
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+}
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg text-white font-semibold bg-gray-700 hover:bg-gray-600 transition-all duration-300;
+}
+.card {
+  @apply bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg;
+}
+.icon-purple {
+  color: #a78bfa;
+}
+.icon-green {
+  color: #34d399;
+}
+.skill-card {
+  @apply bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-purple-500/50 hover:border-purple-500;
+}
+.skill-icon {
+  @apply text-4xl mb-3;
+}
+.skill-name {
+  @apply text-lg font-semibold text-white text-center;
+}
+.section-subtitle {
+  @apply text-2xl font-semibold text-purple-400 mb-8 text-center;
+}

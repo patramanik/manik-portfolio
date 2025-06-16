@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-800 via-gray-900 to-black py-8">
+    <section className="bg-gradient-to-r from-gray-800 via-gray-900 to-black px-10 py-8">
       <div className="container mx-auto px-6 text-center">
         <div className="flex flex-col items-center">
           <GlowingImage 
