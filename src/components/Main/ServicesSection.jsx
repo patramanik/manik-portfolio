@@ -7,20 +7,23 @@ const services = [
     icon: <FaPaintBrush className="text-purple-400 text-5xl" />,
     title: "UI/UX Design",
     border: "purple-500",
-    color :"bg-purple-600 hover:bg-purple-700"
+    color: "bg-purple-600 hover:bg-purple-700",
+    desc: `Crafting intuitive and visually appealing interfaces that enhance user experience and drive engagement.`,
   },
   {
     icon: <FaCode className="text-green-400 text-5xl" />,
     title: "Web Development",
     border: "green-500",
-    color :"bg-green-500 hover:bg-green-600"
+    color: "bg-green-500 hover:bg-green-600",
+    desc:`Building responsive and scalable web applications using the latest technologies to meet your specific needs.`
   },
   {
     icon: <FaAndroid className="text-purple-400 text-5xl" />,
     title: "Android Development",
     border: "purple-500",
-    color :"bg-purple-600 hover:bg-purple-700"
-  }
+    color: "bg-purple-600 hover:bg-purple-700",
+    desc:`Creating innovative and user-friendly Android applications that deliver seamless experiences on mobile devices.`
+  },
 ];
 
 const ServicesSection = () => (
@@ -44,10 +47,11 @@ const ServicesSection = () => (
               {service.title}
             </h3>
             <p className="text-gray-400 mb-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
-              optio rerum sequi!
+              {service.desc}
             </p>
-            <button className={`${service.color} text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300`}>
+            <button
+              className={`${service.color} text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300`}
+            >
               Read more
             </button>
           </div>

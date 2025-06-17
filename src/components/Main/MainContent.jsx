@@ -1,3 +1,4 @@
+import CertificatesSection from "./CertificatesSection";
 import ContactSection from "./ContactSection";
 import HomeSection from "./HomeSection";
 import ProjectsSection from "./ProjectsSection";
@@ -11,6 +12,7 @@ const MainContent = () => (
     <ServicesSection />
     <SkillsSection/>
     <ProjectsSection/>
+    <CertificatesSection/>
     <ContactSection/>
   </main>
 );

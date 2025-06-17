@@ -19,6 +19,7 @@ function Header() {
           <a className="nav-link" href="#services">Services</a>
           <a className="nav-link" href="#skills">Skills</a>
           <a className="nav-link" href="#projects">Projects</a>
+          <a className="nav-link" href="#certificates">Certificates</a>
           <a className="nav-link" href="#contact">Contact</a>
         </div>
         <button

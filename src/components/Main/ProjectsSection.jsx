@@ -42,7 +42,7 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
       {tags.map((tag, index) => (
         <span
           key={index}
-          className={`${colors[index]} text-xs text-white px-2 py-1 rounded-full`}
+          className={`${colors[index % colors.length]} text-xs text-white px-2 py-1 rounded-full`}
         >
           {tag}
         </span>
@@ -50,7 +50,7 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
     </div>
     <a
       href="#"
-      className="inline-block mt-4 text-purple-400 hover:text-purple-300 font-semibold flex items-center"
+      className="inline-flex mt-4 text-purple-400 hover:text-purple-300 font-semibold items-center"
     >
       View Project <MdArrowForward className="text-sm ml-1" />
     </a>

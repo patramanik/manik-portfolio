@@ -11,7 +11,7 @@ import {
   FaReact,
   FaBootstrap,
   FaNodeJs,
-  FaPython,
+  FaJava,
   FaDatabase,
   FaGitAlt,
   FaGithub,
@@ -22,7 +22,8 @@ import {
 import { SiSpring } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
-import { SiExpress } from "react-icons/si";
+import { SiExpress,SiMongodb  } from "react-icons/si";
+
 
 // SkillCard Component
 const SkillCard = ({ icon, name }) => (
@@ -58,13 +59,13 @@ const SkillsSection = () => {
       { icon: <FaFlutter  className="text-blue-400" />, name: "Flutter" },
     ],
     "Back-End Development & Other": [
+      { icon: <FaJava className="text-red-500" />, name: "Java" },
       { icon: <SiSpring className="text-green-400" />, name: "Spring Boot" },
       { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
       { icon: <SiExpress className="text-gray-400" />, name: "Express.js" },
       { icon: <FaLaravel  className="text-red-400" />, name: "Laravel" },
-      { icon: <FaPython className="text-yellow-500" />, name: "Python" },
-      { icon: <FaDatabase className="text-blue-300" />, name: "MongoDB" },
-      { icon: <FaDatabase className="text-orange-400" />, name: "MySQLMongoDB" },
+      { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
+      { icon: <FaDatabase className="text-orange-400" />, name: "MySQL" },
       { icon: <FaGitAlt className="text-red-500" />, name: "Git" },
       { icon: <FaGithub className="text-gray-300" />, name: "GitHub" },
       { icon: <FaCogs className="text-gray-400" />, name: "REST APIs" },

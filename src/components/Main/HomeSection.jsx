@@ -1,13 +1,14 @@
 // import { FaGithub } from "react-icons/fa";
 // import { FaLinkedin } from "react-icons/fa";
-import Avater from "../../assets/Manik.jpg";
+// import Avater from "../../assets/Manik.jpg";
+import HeroImage from "../../assets/Manik_patra.jpg"
 import cv from "../../assets/Manik's_Resume.pdf";
 
 export default function HomeSection() {
   const info = {
     name: "Manik Patra",
     role: "Software Developer",
-    image: Avater,
+    image: HeroImage,
     bio: `Passionate software developer with expertise in full-stack development.
       Specialized in creating scalable and efficient web applications using modern
       technologies.`,
@@ -24,7 +25,7 @@ export default function HomeSection() {
       <img
         src={info.image}
         alt="Manik Patra - Software Developer"
-        className="w-40 h-40 rounded-full object-fill mb-6 border-4 border-purple-500 shadow-lg"
+        className="w-40 h-40 rounded-full object-cover mb-6 border-4 border-purple-500 shadow-lg"
       />
       <h1 className="text-5xl font-extrabold text-white mb-3">{info.name}</h1>
       <p className="text-2xl text-purple-400 mb-6">{info.role}</p>
