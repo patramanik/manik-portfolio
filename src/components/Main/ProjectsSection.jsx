@@ -1,19 +1,19 @@
-
 import { MdArrowForward } from "react-icons/md";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import BiologyLerner from "../../assets/image/BiologyLerner.jpg";
 
 const projects = [
   {
-    title: "Project Title 1",
-    description: "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA4ROTBcqn7i_R4TGbR35vpwXvfsrwUnVa_gcYT9voqNoAZ1BRRqHkz4EmVetvuG-FsFS0epr5cPNh46Ysz_hWS58SKlKBBEbC_cPvk6HwJcLe7Eoliv5gLEeH0f4nKARpLRUqaBth2hhCHKgLu7XQOyuBIv6I-rXV8AeueyOAZsQ3YtrppZxMuuY9RpJx0bFBGishbv4KwBCyh61C-keh0xFK9tIGq2e0cXSUI2XWoQJ7zqJcWtsiLU_St7v_1SsZqYLuC6uYnpK4",
-    tags: ["React", "Node.js"],
-    colors: ["bg-purple-500", "bg-green-500"],
+    title: "BiologyLerner App",
+    description: `Developed a sleek, responsive UI with content control features and integrated RESTful APIs using Dio.Built an admin dashboard with login, post management, and full API support. Implemented AdMob ads and Firebase Analytics for user insights. App published on the Google Play Store.`,
+    image: BiologyLerner,
+    tags: ["Flutter","AdMob","Firebase","Laravel"],
+    colors: ["bg-blue-400","bg-red-400","bg-yellow-500","bg-red-400"],
   },
   {
     title: "Project Title 2",
-    description: "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAfJsoAOKNz0nHZb4siM4kyqARxALl7Aivi1kWwl-hW8LHZPRUhO-_7gLuFFXYlxwSe4F2WEArVXb-FSDiNTzZ-jQNk5zJHfIyblQM0JsG2-uf12IIXsKDo-kcx81daSMP4ZPO_DfYmXwcGAHoX6GBy8IxZ72Y23mpy_k9zE43GDqBnZGps37GlWUtinll_NxqI511W0DZ9uN1v7sKZd-3Dqc_6odVkWJNqNA1zh2N3DilHoNCgkLy4NG4OFBatEwuPRIEFdfb6xr8",
     tags: ["Python", "Flask"],
@@ -21,7 +21,8 @@ const projects = [
   },
   {
     title: "Project Title 3",
-    description: "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuC1BuTjDtL2IVm5FwDCyZoeDf6gUeyjp-NCLjrjunC-_F3MoJQ05cpPj7rkKM1R1grNHTX6AT-l9vaYjKEltKjlz-XSQQNGwKlFiuAwQjdaPkz4pf_pYPeNZ9HdcLrUkC-hA1v5zPWB88SKMJG9pMHc7J4TjsS7eAW4mFIR8dAuz3oi5FD0o_f7wFA2YLEp6lrxT1mlPyUT_ltMT40ECPnqLaZWkjQLAc2XFL1dbgmQ0dzt5RTHEdeyUp06mVXNSYUKXkvzQy1E6RA",
     tags: ["Angular", "Firebase"],
@@ -42,7 +43,9 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
       {tags.map((tag, index) => (
         <span
           key={index}
-          className={`${colors[index % colors.length]} text-xs text-white px-2 py-1 rounded-full`}
+          className={`${
+            colors[index % colors.length]
+          } text-xs text-white px-2 py-1 rounded-full`}
         >
           {tag}
         </span>
@@ -58,11 +61,11 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
 );
 
 ProjectCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const ProjectsSection = () => {

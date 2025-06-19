@@ -1,7 +1,7 @@
-// import { FaGithub } from "react-icons/fa";
-// import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 // import Avater from "../../assets/Manik.jpg";
-import HeroImage from "../../assets/Manik_patra.jpg"
+import HeroImage from "../../assets/Manik_patra.jpg";
 import cv from "../../assets/Manik's_Resume.pdf";
 
 export default function HomeSection() {
@@ -36,14 +36,16 @@ export default function HomeSection() {
           href={info.github}
           target="_blank"
         >
-          <i className="fab fa-github fa-2x"></i>
+          {/* <i className="fab fa-github fa-2x"></i> */}
+          <FaGithub className="fa-2x"/>
         </a>
         <a
           className="text-gray-400 hover:text-white transition-colors duration-300"
           href={info.linkedin}
           target="_blank"
         >
-          <i className="fab fa-linkedin fa-2x"></i>
+          {/* <i className="fab fa-linkedin fa-2x"></i> */}
+          <FaLinkedin className="fa-2x"/>
         </a>
       </div>
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -51,7 +53,13 @@ export default function HomeSection() {
           Download CV
         </a>
 
-        <button className="btn-secondary">Email Me </button>
+        <a
+          href="mailto:manikpatra@gmail.com"
+          target="_blank"
+          className="btn-secondary"
+        >
+          Email Me
+        </a>
       </div>
     </section>
   );
