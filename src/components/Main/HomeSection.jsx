@@ -15,8 +15,8 @@ export default function HomeSection() {
     cv: cv,
     github: "https://github.com/patramanik/",
     linkedin: "https://www.linkedin.com/in/manik-patra-158429199/",
-   email: "https://mail.google.com/mail/?view=cm&fs=1&to=manikpatra409@gmail.com",
-
+    email: "https://mail.google.com/mail/?view=cm&fs=1&to=manikpatra409@gmail.com",
+  
   };
 
   return (
