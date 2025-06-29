@@ -30,6 +30,11 @@ body {
 .skill-card {
   @apply bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-purple-500/50 hover:border-purple-500;
 }
+
+.skill-section {
+  @apply bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg transition-all duration-300 hover:shadow-purple-500/50 hover:border-purple-500;
+}
+
 .skill-icon {
   @apply text-4xl mb-3;
 }

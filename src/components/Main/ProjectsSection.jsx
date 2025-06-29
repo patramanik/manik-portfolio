@@ -5,32 +5,45 @@ import BiologyLerner from "../../assets/image/BiologyLerner.jpg";
 const projects = [
   {
     title: "BiologyLerner App",
-    description: `Developed a sleek, responsive UI with content control features and integrated RESTful APIs using Dio.Built an admin dashboard with login, post management, and full API support. Implemented AdMob ads and Firebase Analytics for user insights. App published on the Google Play Store.`,
+    shortDescription: `Developed a sleek, responsive UI with content control features and integrated RESTful APIs using Dio.`,
     image: BiologyLerner,
-    tags: ["Flutter","AdMob","Firebase","Laravel"],
-    colors: ["bg-blue-400","bg-red-400","bg-yellow-500","bg-red-400"],
+    description:"",
+    images:[],
+    tags: ["Flutter", "AdMob", "Firebase", "Laravel"],
+    colors: ["bg-blue-400", "bg-red-400", "bg-yellow-500", "bg-red-400"],
+    isLive: true,
+    liveLink: "",
+    github: "",
   },
   {
     title: "Project Title 2",
-    description:
+    shortDescription:
       "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAfJsoAOKNz0nHZb4siM4kyqARxALl7Aivi1kWwl-hW8LHZPRUhO-_7gLuFFXYlxwSe4F2WEArVXb-FSDiNTzZ-jQNk5zJHfIyblQM0JsG2-uf12IIXsKDo-kcx81daSMP4ZPO_DfYmXwcGAHoX6GBy8IxZ72Y23mpy_k9zE43GDqBnZGps37GlWUtinll_NxqI511W0DZ9uN1v7sKZd-3Dqc_6odVkWJNqNA1zh2N3DilHoNCgkLy4NG4OFBatEwuPRIEFdfb6xr8",
+    images:[],
     tags: ["Python", "Flask"],
     colors: ["bg-yellow-500", "bg-blue-500"],
+    isLive: true,
+    liveLink: "",
+    github: "",
   },
   {
     title: "Project Title 3",
-    description:
+    shortDescription:
       "Short description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuC1BuTjDtL2IVm5FwDCyZoeDf6gUeyjp-NCLjrjunC-_F3MoJQ05cpPj7rkKM1R1grNHTX6AT-l9vaYjKEltKjlz-XSQQNGwKlFiuAwQjdaPkz4pf_pYPeNZ9HdcLrUkC-hA1v5zPWB88SKMJG9pMHc7J4TjsS7eAW4mFIR8dAuz3oi5FD0o_f7wFA2YLEp6lrxT1mlPyUT_ltMT40ECPnqLaZWkjQLAc2XFL1dbgmQ0dzt5RTHEdeyUp06mVXNSYUKXkvzQy1E6RA",
     tags: ["Angular", "Firebase"],
     colors: ["bg-red-500", "bg-purple-500"],
+    isLive: true,
+    liveLink: "",
+    github: "",
   },
 ];
 
-const ProjectCard = ({ title, description, image, tags, colors }) => (
+const ProjectCard = ({ title, shortDescription, image, tags, colors }) => (
   <div className="card bg-gray-700 p-4 rounded-lg shadow-lg">
     <img
       alt={title}
@@ -38,7 +51,7 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
       className="rounded-lg mb-4 w-full h-48 object-cover"
     />
     <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
-    <p className="text-gray-400 mb-4">{description}</p>
+    <p className="text-gray-400 mb-4">{shortDescription}</p>
     <div className="flex flex-wrap gap-2">
       {tags.map((tag, index) => (
         <span
@@ -62,7 +75,7 @@ const ProjectCard = ({ title, description, image, tags, colors }) => (
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
