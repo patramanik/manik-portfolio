@@ -1,34 +1,32 @@
-import { FaExternalLinkAlt,FaJava } from "react-icons/fa";
-import { IoMdCloudDone } from "react-icons/io";
-import { IoShieldCheckmarkSharp } from "react-icons/io5";
+import { FaExternalLinkAlt,FaJava,FaReact,FaNodeJs } from "react-icons/fa";
 
 const certificateData = [
   {
     icon: <FaJava/>,
     color: 'text-yellow-400',
     title: 'Full-Stack Web Development',
-    issuer: 'Coursera - Issued Aug 2023',
+    issuer: 'MindScripts Tech - Issued Jul 2025',
     description:
-      'Completed an intensive program covering MERN stack, Next.js, and cloud deployment.',
+      'Completed an intensive program covering Java Full Stack, Spring Boot and Angular deployment.',
     link: '#',
   },
   {
-    icon: <IoMdCloudDone/>,
+    icon: <FaReact/>,
     color: 'text-blue-400',
-    title: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services - Issued May 2023',
+    title: 'Mastering React: React Crash Course with Mini Projects',
+    issuer: 'Udemy - Issued June 2025',
     description:
-      'Validated foundational knowledge of AWS Cloud concepts, services, and terminology.',
-    link: '#',
+      'Completed an intensive program covering of react concepts likes react components,hooks and context api.',
+    link: 'https://www.udemy.com/certificate/UC-6b5115a4-a5a8-41f3-bfe1-a04a65c0385e/',
   },
   {
-    icon: <IoShieldCheckmarkSharp/>,
+    icon: <FaNodeJs/>,
     color: 'text-green-400',
-    title: 'Cybersecurity Fundamentals',
-    issuer: 'Udemy - Issued Jan 2024',
+    title: 'NodeJs',
+    issuer: 'Udemy - Issued April 2024',
     description:
-      'Gained insights into basic cybersecurity principles, threat landscape, and mitigation techniques.',
-    link: '#',
+      'Completed an intensive program covering of Node js concepts, express js,ORM and restApi.',
+    link: 'https://www.udemy.com/certificate/UC-b7f932bd-1e92-47ac-8899-e73e8eed91c5/',
   },
 ];
 

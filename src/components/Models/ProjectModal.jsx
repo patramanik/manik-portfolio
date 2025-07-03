@@ -1,15 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*  ProjectModal.jsx (updated)                                                 */
+/* -------------------------------------------------------------------------- */
 import PropTypes from "prop-types";
+import ImageSlider from "./ImageSlider";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   if (!isOpen || !project) return null;
 
+  /* fall‑back if images array missing/empty */
+  const gallery =
+    project.images?.length > 0 ? project.images : [project.image].filter(Boolean);
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
-      <div className="bg-gray-900 text-white rounded-lg shadow-lg w-full max-w-3xl p-6 relative overflow-y-auto max-h-[90vh]">
-        {/* Close button */}
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
+      <div className="bg-gray-900 text-white rounded-lg shadow-lg w-full max-w-3xl p-6 relative max-h-[90vh] overflow-y-auto">
+        {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-400 hover:text-white text-xl"
+          className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl leading-none"
         >
           &times;
         </button>
@@ -17,28 +25,25 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         {/* Title */}
         <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
 
-        {/* Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          {project.images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Project ${project.title} ${index + 1}`}
-              className="rounded-lg object-cover w-full h-48"
-            />
-          ))}
-        </div>
+        {/* Slider */}
+        {gallery.length > 0 && (
+          <ImageSlider images={gallery} height="h-72 sm:h-80 md:h-96" />
+        )}
 
         {/* Description */}
-        <p className="text-gray-300 mb-6">{project.description}</p>
+        {project.description && (
+          <p className="text-gray-300 my-6 leading-relaxed">
+            {project.description}
+          </p>
+        )}
 
         {/* Tags */}
-        {project.tags && (
+        {project.tags?.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.tags.map((tag, idx) => (
+            {project.tags.map((tag) => (
               <span
-                key={idx}
-                className="bg-purple-600 text-white text-sm px-3 py-1 rounded-full"
+                key={tag}
+                className="bg-purple-600 px-3 py-1 text-sm rounded-full"
               >
                 {tag}
               </span>
@@ -53,7 +58,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white font-medium transition"
+              className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded font-medium transition"
             >
               Live Demo
             </a>
@@ -63,7 +68,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded text-white font-medium transition"
+              className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded font-medium transition"
             >
               GitHub
             </a>
@@ -79,7 +84,8 @@ ProjectModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    images: PropTypes.arrayOf(PropTypes.string),
+    image: PropTypes.string, // single‑image fallback
     description: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string),
     live: PropTypes.string,
